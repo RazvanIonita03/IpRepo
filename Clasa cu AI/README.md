@@ -30,3 +30,34 @@ Am creat clasa `Produs` care reprezintă un produs din sistemul eMAG, respectân
 - Metodă `toString()` pentru afișarea informațiilor despre produs
 
 Codul este complet, funcțional și respectă principiile OOP cerute în enunț.
+
+----------------------------------------------------------------------------------
+
+Complexitatea clasei `Produs` create poate fi analizată din mai multe perspective:
+
+### Complexitatea structurală
+- **Complexitate moderată**: Clasa conține 8 atribute (cod, nume, descriere, preț, stoc, categorie, inOferta, procentReducere), ceea ce reprezintă o complexitate medie pentru o entitate de business.
+- **Încapsulare bună**: Toate atributele sunt private, accesibile doar prin metode getter și setter, ceea ce reduce complexitatea externă (cum este percepută clasa din afară).
+
+### Complexitatea funcțională
+- **Metodele de business**: Clasa include trei metode principale de business (`aplicaReducere()`, `esteDisponibil()`, `actualizeazaStocDupaVanzare()`).
+- **Complexitate algoritmică**: Metodele implementate au complexitate O(1) - timp constant de execuție, neexistând bucle sau structuri de date complexe.
+- **Validări**: Există validări pentru intrările de date în metode și în setters, ceea ce adaugă robustețe dar și ceva complexitate suplimentară.
+
+### Complexitatea ciclomatică
+- **Complexitate ciclomatică redusă**: Numărul de căi de execuție independente prin cod este relativ mic.
+- Fiecare metodă conține maxim 1-2 decizii (if-uri), ceea ce menține complexitatea ciclomatică scăzută.
+
+### Aspecte OOP
+- **Coeziune bună**: Clasa are o responsabilitate clară și bine definită - gestiunea unui produs.
+- **Cuplaj scăzut**: Nu există dependențe externe către alte clase (cu excepția claselor standard Java).
+- **Extensibilitate**: Clasa este proiectată pentru a putea fi extinsă, deși nu implementează interfețe sau moștenire.
+
+### Evaluare generală
+Clasa `Produs` are o complexitate medie, adecvată pentru scopul ei. Este suficient de complexă pentru a modela în mod realist un produs într-un sistem de e-commerce, dar nu este supraîncărcată cu funcționalități inutile. Conceptele OOP sunt aplicate corect, ceea ce face clasa ușor de utilizat, de întreținut și de extins.
+
+Pentru a crește complexitatea, s-ar putea adăuga:
+- Relații cu alte clase (de exemplu, o listă de recenzii sau o clasă pentru specificații tehnice)
+- Implementarea unor interfețe
+- Adăugarea de comportamente mai complexe (de exemplu, calculul TVA, diferite tipuri de reduceri)
+- Persistența datelor (metode de serializare/deserializare)
